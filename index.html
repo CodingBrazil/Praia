@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAIA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+        }
+
+        .ceu {
+            width: 100vw;
+            height: 25vh;
+            background: linear-gradient(180deg, #80afdf, #6f6ff1);
+            overflow: hidden;
+        }
+
+        .ceu .sol {
+            width: 70px;
+            height: 53px;
+            background: radial-gradient(#dcff00, #d9e81e);
+            box-shadow: #dcfb06 0px 0px 57px 0px, #dcfb06 0px 0px 17px 9px;
+            border-radius: 100%;
+            margin: 0 auto;
+            position: relative;
+            top: 74px;
+        }
+
+        .ceu .nuvens div {
+            position: relative;
+            display: flex;
+            width: 63px;
+            height: 34px;
+        }
+
+        .ceu .nuvens div:nth-child(3n+1)::before {
+            animation: movernuven 40s infinite linear;
+            position: relative;
+            left: -14vw;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: white;
+            border-radius: 50%;
+            box-shadow: aliceblue 21px 10px 0px 0px;
+        }
+
+        .ceu .nuvens div:nth-child(3n+2)::before {
+            content: '';
+            position: relative;
+            left: -20vw;
+            width: 100%;
+            height: 100%;
+            background: white;
+            border-radius: 50%;
+            box-shadow: aliceblue 21px 10px 0px 0px;
+            animation: movernuven 30s infinite linear;
+
+        }
+
+        .ceu .nuvens div:nth-child(3n+3)::before {
+            content: '';
+            position: relative;
+            left: -10vw;
+            width: 100%;
+            height: 100%;
+            background: white;
+            border-radius: 50%;
+            box-shadow: aliceblue 21px 10px 0px 0px;
+            animation: movernuven 20s infinite linear;
+
+        }
+
+        @keyframes movernuven {
+            100% {
+                left: 100vw;
+            }
+        }
+
+        .terra {
+            overflow: hidden;
+            width: 100vw;
+            height: 75vh;
+            overflow: hidden;
+            width: 100vw;
+            height: 75vh;
+            background: linear-gradient(45deg, #2e7b83, #a7f3ff, #b8f5ff);
+        }
+
+        .terra div:nth-child(1) {
+            width: 177px;
+            height: 49vh;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 49vh solid #e58706;
+            margin: 0 auto;
+            position: relative;
+            top: 26vh;
+        }
+
+        .terra div:nth-child(2) {
+            width: 100vw;
+            height: 19vh;
+            background: radial-gradient(#e5a969, #e1a25e, #d99043, #d99043);
+            position: relative;
+            top: 7vh;
+        }
+
+        .terra div:nth-child(3) {
+            width: 30px;
+            height: 19vh;
+            background: #73481a;
+            position: absolute;
+            left: 77vw;
+            top: 73vh;
+        }
+
+        .terra div:nth-child(3)::before {
+            content: '';
+            position: absolute;
+            width: 108px;
+            height: 52px;
+            border-radius: 27px;
+            box-shadow: #019b01 0px 0px 0px 30px, #412e1a 1px 25vh 15px -5px;
+            background: #069d06;
+            top: -82px;
+            left: -40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ceu">
+        <div class="sol"></div>
+        <div class="nuvens">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div class="terra">
+        <div class="ponte"></div>
+        <div class="praia"></div>
+        <div class="arvore"></div>
+    </div>
+</body>
+
+</html>
